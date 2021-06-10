@@ -10,8 +10,20 @@
 
 <body>
 
-    <h1>Rocha</h1>
-    <h3>(21)99337-7923</h3>
+    <%- include ('./partials/navbar.ejs')%>
+
+        <%for (let user of users) {%>
+
+            <%if(user.id % 2==0) {%>
+                <h1>
+                    <%=user.name%>
+                </h1>
+                <h3>
+                    <%=user.phone%>
+                </h3>
+
+                <%}%>
+                    <%}%>
 
 </body>
 
